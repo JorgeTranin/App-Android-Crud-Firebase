@@ -38,10 +38,18 @@
         android:id="@+id/newAccountFragment"
         android:name="com.jorgetranin.app_android_crud_firebase.ui.auth.NewAccountFragment"
         android:label="fragment_new_account"
-        tools:layout="@layout/fragment_new_account" />
+        tools:layout="@layout/fragment_new_account" >
+        <action
+            android:id="@+id/action_newAccountFragment_to_loginFragment2"
+            app:destination="@id/loginFragment2" />
+    </fragment>
     <fragment
         android:id="@+id/recoverAccountFragment"
         android:name="com.jorgetranin.app_android_crud_firebase.ui.auth.RecoverAccountFragment"
         android:label="fragment_recover_account"
-        tools:layout="@layout/fragment_recover_account" />
+        tools:layout="@layout/fragment_recover_account" >
+        <action
+            android:id="@+id/action_recoverAccountFragment_to_loginFragment2"
+            app:destination="@id/loginFragment2" />
+    </fragment>
 </navigation>
