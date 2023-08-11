@@ -11,4 +11,9 @@
     <string name="text_recover_login_fragment">Recuperar Conta</string>
     <string name="text_toolbar_recover_account_fragment">Recuperar Conta</string>
     <string name="informe_seu_e_mail_para_receber_um_link_de_altera_o_de_senha">Informe seu e-mail para receber um link de alteração de senha.</string>
+    <string name="status_task_todo">A Fazer</string>
+    <string name="status_task_doing">Fazendo</string>
+    <string name="status_task_done">Feitas</string>
+    <string name="carregando_tarefas">Carregando tarefas...</string>
+    <string name="floating">Float</string>
 </resources>

@@ -10,7 +10,6 @@ import com.google.android.material.tabs.TabLayoutMediator
 import com.google.firebase.auth.FirebaseAuth
 import com.jorgetranin.app_android_crud_firebase.R
 import com.jorgetranin.app_android_crud_firebase.databinding.FragmentHomeBinding
-import com.jorgetranin.app_android_crud_firebase.databinding.FragmentNewAccountBinding
 import com.jorgetranin.app_android_crud_firebase.ui.adapter.ViewPagerAdapter
 
 
@@ -31,7 +30,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         auth = FirebaseAuth.getInstance()
-        //configTablayout()
+        configTablayout()
         setupListeners()
 
     }
@@ -52,11 +51,11 @@ class HomeFragment : Fragment() {
     private fun configTablayout() {
         val adapter = ViewPagerAdapter(requireActivity())
         binding.viewPager.adapter = adapter
-/*
+
         adapter.addFragment(TodoFragment(), R.string.status_task_todo)
         adapter.addFragment(DoingFragment(), R.string.status_task_doing)
         adapter.addFragment(DoneFragment(), R.string.status_task_done)
-*/
+
         binding.viewPager.offscreenPageLimit = adapter.itemCount
 
         TabLayoutMediator(
