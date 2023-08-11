@@ -11,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import com.google.firebase.auth.FirebaseAuth
 import com.jorgetranin.app_android_crud_firebase.R
 import com.jorgetranin.app_android_crud_firebase.databinding.FragmentRecoverAccountBinding
+import com.jorgetranin.app_android_crud_firebase.helper.FirebaseHelper
 
 
 class RecoverAccountFragment : Fragment() {
@@ -64,7 +65,11 @@ class RecoverAccountFragment : Fragment() {
                     findNavController().navigate(R.id.action_recoverAccountFragment_to_loginFragment2)
                 } else {
                     binding.progressBar.isVisible = false
-                    Toast.makeText(requireContext(), "Erro no email", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        requireContext(),
+                        FirebaseHelper.validError(task.exception?.message ?: ""),
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
     }

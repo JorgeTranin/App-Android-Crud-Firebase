@@ -1,9 +1,6 @@
 package com.jorgetranin.app_android_crud_firebase.ui.auth
 
-import android.content.ContentValues.TAG
-import android.opengl.Visibility
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import com.google.firebase.auth.FirebaseAuth
 import com.jorgetranin.app_android_crud_firebase.R
 import com.jorgetranin.app_android_crud_firebase.databinding.FragmentNewAccountBinding
+import com.jorgetranin.app_android_crud_firebase.helper.FirebaseHelper
 
 class NewAccountFragment : Fragment() {
     lateinit var auth: FirebaseAuth
@@ -60,7 +58,11 @@ class NewAccountFragment : Fragment() {
                     findNavController().navigate(R.id.action_newAccountFragment_to_homeFragment)
                 } else {
                     binding.progressBar.isVisible = false
-                    Toast.makeText(requireContext(), "Erro ao cadastrar", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        requireContext(),
+                        FirebaseHelper.validError(task.exception?.message ?: ""),
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
     }

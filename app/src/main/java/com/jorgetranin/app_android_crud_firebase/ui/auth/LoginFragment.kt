@@ -11,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import com.google.firebase.auth.FirebaseAuth
 import com.jorgetranin.app_android_crud_firebase.R
 import com.jorgetranin.app_android_crud_firebase.databinding.FragmentLoginBinding
+import com.jorgetranin.app_android_crud_firebase.helper.FirebaseHelper
 
 
 class LoginFragment : Fragment() {
@@ -78,7 +79,11 @@ class LoginFragment : Fragment() {
                     findNavController().navigate(R.id.action_loginFragment2_to_homeFragment)
                 } else {
                     binding.progressBar.isVisible = false
-                    Toast.makeText(requireContext(), "Erro ao Fazer Login", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        requireContext(),
+                        FirebaseHelper.validError(task.exception?.message ?: ""),
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
     }
