@@ -1,5 +1,5 @@
 # App-Android-Crud-Firebase
-
+app Crud utilizando o banco da dados Realtime Database do Firebase.
 App com Authentication no Firebase e CRUD para cadastrar Notas.
 
 ### Playlist do curso

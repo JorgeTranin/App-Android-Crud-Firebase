@@ -10,6 +10,7 @@
         android:id="@+id/rvTask"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        tools:listitem="@layout/item_adapter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,7 +42,21 @@
             android:textColor="@color/white"
             android:textAlignment="center" />
 
+
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textInfo2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/carregando_tarefas"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabAdd"
@@ -49,8 +64,8 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:backgroundTint="@color/white"
-        app:tint="@color/primary"
+        android:backgroundTint="@color/color_delete"
+        app:tint="@color/white"
         android:src="@drawable/ic_add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

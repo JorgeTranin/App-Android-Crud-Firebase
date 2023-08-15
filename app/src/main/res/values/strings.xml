@@ -53,5 +53,7 @@
     <string name="text_email_empty_recover_account_fragment">Informe seu e-mail.</string>
     <string name="text_email_send_sucess_recover_account_fragment">Pronto, acabamos de enviar um link para seu e-mail.</string>
     <string name="error_generic">Erro no sistema</string>
+    <string name="remover">Remover</string>
+    <string name="editar">Editar</string>
 
 </resources>
